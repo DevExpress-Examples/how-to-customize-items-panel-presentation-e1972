@@ -1,0 +1,31 @@
+﻿<Window xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+        xmlns:dxe="http://schemas.devexpress.com/winfx/2008/xaml/editors" 
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+        x:Class="ComboBoxEdit_ItemsPanelTemplate.Window1" 
+        Title="Customizing Items Panel Presentation" 
+        Height="300" Width="300">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+            <ColumnDefinition Width="100" />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition Height="22" />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <dxe:ComboBoxEdit Grid.Column="1" Grid.Row="1">
+            <dxe:ComboBoxEdit.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <StackPanel Orientation="Horizontal" VerticalAlignment="Center" 
+                                HorizontalAlignment="Center" Background="AntiqueWhite"/>
+                </ItemsPanelTemplate>
+            </dxe:ComboBoxEdit.ItemsPanel>
+            <dxe:ComboBoxEditItem Content="Seattle" />
+            <dxe:ComboBoxEditItem Content="London" />
+            <dxe:ComboBoxEditItem Content="Redmond" />
+            <dxe:ComboBoxEditItem Content="Tacoma" />
+        </dxe:ComboBoxEdit>
+    </Grid>
+</Window>
